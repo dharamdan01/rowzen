@@ -1,0 +1,3 @@
+is_active,dept_code,full_name,student_no
+true,10,Kiran,8
+false,20,Adil,9

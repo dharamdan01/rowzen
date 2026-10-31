@@ -1,0 +1,5 @@
+person_id,full_name,active
+1,Ali,true
+2,Mina,false
+3,Noor,yes
+4,Sara,maybe

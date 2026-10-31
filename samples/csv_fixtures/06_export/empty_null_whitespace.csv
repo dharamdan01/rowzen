@@ -1,0 +1,5 @@
+record_id,optional_text,identifier,amount
+1,,0001,0
+2,NULL,0002,10.00
+3, ,0003,1.50
+4,NaN,0004,2.50

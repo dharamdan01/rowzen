@@ -1,0 +1,50 @@
+
+# Dependencies
+/node_modules/
+
+# Next.js
+/.next/
+/out/
+/build/
+/dist/
+*.tsbuildinfo
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Testing artifacts
+/coverage/
+/playwright-report/
+/test-results/
+/playwright/.cache/
+
+# Local deployment and caches
+/.vercel/
+/.turbo/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+pnpm-debug.log*
+
+# Local databases
+*.db
+*.db-journal
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# personal AI assistant settings
+/.agents/
+/.claude/
+/.windsurf/
+/.AGENTS.md
+/.agents-
+
+
+.env
+.auth

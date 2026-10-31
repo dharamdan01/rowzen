@@ -1,0 +1,90 @@
+{
+  "overview": {
+    "light-mobile": {
+      "src": "/landing/overview-light-mobile.webp",
+      "width": 308,
+      "height": 378
+    },
+    "light-desktop": {
+      "src": "/landing/overview-light-desktop.webp",
+      "width": 1054,
+      "height": 437
+    },
+    "dark-mobile": {
+      "src": "/landing/overview-dark-mobile.webp",
+      "width": 308,
+      "height": 378
+    },
+    "dark-desktop": {
+      "src": "/landing/overview-dark-desktop.webp",
+      "width": 1054,
+      "height": 437
+    }
+  },
+  "results": {
+    "light-mobile": {
+      "src": "/landing/results-light-mobile.webp",
+      "width": 308,
+      "height": 1047
+    },
+    "light-desktop": {
+      "src": "/landing/results-light-desktop.webp",
+      "width": 1054,
+      "height": 682
+    },
+    "dark-mobile": {
+      "src": "/landing/results-dark-mobile.webp",
+      "width": 308,
+      "height": 1047
+    },
+    "dark-desktop": {
+      "src": "/landing/results-dark-desktop.webp",
+      "width": 1054,
+      "height": 682
+    }
+  },
+  "dependencies": {
+    "light-mobile": {
+      "src": "/landing/dependencies-light-mobile.webp",
+      "width": 272,
+      "height": 420
+    },
+    "light-desktop": {
+      "src": "/landing/dependencies-light-desktop.webp",
+      "width": 1018,
+      "height": 421
+    },
+    "dark-mobile": {
+      "src": "/landing/dependencies-dark-mobile.webp",
+      "width": 272,
+      "height": 420
+    },
+    "dark-desktop": {
+      "src": "/landing/dependencies-dark-desktop.webp",
+      "width": 1018,
+      "height": 421
+    }
+  },
+  "corrections": {
+    "light-mobile": {
+      "src": "/landing/corrections-light-mobile.webp",
+      "width": 308,
+      "height": 323
+    },
+    "light-desktop": {
+      "src": "/landing/corrections-light-desktop.webp",
+      "width": 1054,
+      "height": 323
+    },
+    "dark-mobile": {
+      "src": "/landing/corrections-dark-mobile.webp",
+      "width": 308,
+      "height": 323
+    },
+    "dark-desktop": {
+      "src": "/landing/corrections-dark-desktop.webp",
+      "width": 1054,
+      "height": 323
+    }
+  }
+}

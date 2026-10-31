@@ -1,0 +1,6 @@
+record_id,description,postal_code,amount,nullable_text
+1,"Quotes: ""hello"", commas, and semicolons",00101,120.50,
+2,"First line
+second line; unicode: سارہ / Café",00002,0.00,NULL
+3,=2+2,00003,10.10, a 
+4,apostrophe O'Brien and emoji ✨,09999,123456.78,

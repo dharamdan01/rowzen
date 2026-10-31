@@ -1,0 +1,80 @@
+import { describe, expect, it } from 'vitest';
+import { validateSchemaConfiguration } from '../../../src/lib/rehearsal/schema';
+import type { DatasetRules, Relationship } from '../../../src/lib/rehearsal/rules';
+
+type S = {
+  name: string;
+  headers: string[];
+};
+
+const departments: S = {
+  name: 'departments',
+  headers: ['id', 'name'],
+};
+
+const students: S = {
+  name: 'students',
+  headers: ['id', 'name', 'department_id'],
+};
+
+function settings() {
+  const datasets: S[] = [departments, students];
+  const rules: Record<string, DatasetRules> = {
+    departments: {
+      primaryKey: 'id',
+      required: ['name'],
+      types: { id: 'integer' },
+    },
+    students: {
+      primaryKey: 'id',
+      required: ['name'],
+      types: { department_id: 'integer' },
+    },
+  };
+  const relationships: Relationship[] = [
+    {
+      childDataset: 'students',
+      childColumn: 'department_id',
+      parentDataset: 'departments',
+      parentColumn: 'id',
+    },
+  ];
+  return { datasets, rules, relationships };
+}
+
+describe('Phase 6 schema configuration checks', () => {
+  it('accepts a compatible schema', () => {
+    const { datasets, rules, relationships } = settings();
+    expect(validateSchemaConfiguration(datasets, rules, relationships)).toEqual([]);
+  });
+
+  it('produces deterministic issue ordering and IDs', () => {
+    const { datasets, rules, relationships } = settings();
+    rules.students.required.push('does_not_exist');
+    const first = validateSchemaConfiguration(datasets, rules, relationships);
+    const second = validateSchemaConfiguration(
+      [...datasets].reverse(),
+      rules,
+      [...relationships].reverse()
+    );
+    expect(first).toEqual(second);
+    expect(first[0]?.id).toMatch(/^issue_[a-f0-9]{16}$/);
+    expect(first[0]?.rowNumber).toBeNull();
+  });
+
+  it('reports missing dataset rules', () => {
+    const { datasets, rules, relationships } = settings();
+    delete rules.students;
+    const issues = validateSchemaConfiguration(datasets, rules, relationships);
+    expect(
+      issues.some(
+        (issue) => issue.code === 'BAD_SCHEMA' && issue.dataset === 'students'
+      )
+    ).toBe(true);
+  });
+
+  it('reports missing PK, required and typed columns', () => {
+    const { datasets, rules, relationships } = settings();
+    // Finish or adjust your test assertions here
+  });
+});

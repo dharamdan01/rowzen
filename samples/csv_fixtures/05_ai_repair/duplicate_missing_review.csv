@@ -1,0 +1,4 @@
+person_id,full_name,dept_code
+1,Ali,10
+2,Sara,10
+2,,99

@@ -1,0 +1,4 @@
+student_no,full_name,dept_code,is_active
+1,Ali,10,true
+2,Sara,20,false
+3,Nadia,10,true

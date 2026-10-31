@@ -1,0 +1,5 @@
+student_id,full_name,email,department_id,is_active,enrolled_on,tuition_fee,postal_code
+101,Amina,amina@example.test,10,true,2026-09-01,1250.50,00123
+102,Bilal,bilal@example.test,20,false,2026-09-02,850.00,00456
+103,Sara,sara@example.test,10,true,2026-09-03,1500.00,00202
+104,Usman,usman@example.test,30,true,2026-09-04,625.75,00007

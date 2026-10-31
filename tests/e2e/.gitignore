@@ -1,0 +1,3 @@
+# Only covers files accidentally placed under tests/e2e.
+*.auth.json
+*.storage.json
